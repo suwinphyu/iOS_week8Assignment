@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="165" id="KGk-i7-Jjw" customClass="ChildListItemTableViewCell" customModule="NestedTableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="108.5"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jm5-W5-mgP">
+                        <rect key="frame" x="16" y="12" width="288" height="92"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NtS-QV-L5J">
+                                <rect key="frame" x="0.0" y="16" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6vb-Vi-o1t"/>
+                                    <constraint firstAttribute="width" constant="60" id="sx6-4x-c7T"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bN-gD-DP3">
+                                <rect key="frame" x="84" y="16" width="110" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpQ-Kc-iCC">
+                                <rect key="frame" x="84" y="53" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="7bN-gD-DP3" firstAttribute="leading" secondItem="NtS-QV-L5J" secondAttribute="trailing" constant="24" id="Bip-P6-CBG"/>
+                            <constraint firstItem="NtS-QV-L5J" firstAttribute="leading" secondItem="Jm5-W5-mgP" secondAttribute="leading" id="LOm-lY-3uI"/>
+                            <constraint firstItem="mpQ-Kc-iCC" firstAttribute="leading" secondItem="7bN-gD-DP3" secondAttribute="leading" id="TlH-Fh-AzX"/>
+                            <constraint firstItem="mpQ-Kc-iCC" firstAttribute="top" secondItem="7bN-gD-DP3" secondAttribute="bottom" constant="16" id="ZJc-pO-DLe"/>
+                            <constraint firstItem="NtS-QV-L5J" firstAttribute="top" secondItem="Jm5-W5-mgP" secondAttribute="top" constant="16" id="aPO-ch-dzk"/>
+                            <constraint firstItem="7bN-gD-DP3" firstAttribute="top" secondItem="NtS-QV-L5J" secondAttribute="top" id="r6f-2z-BMy"/>
+                            <constraint firstAttribute="bottom" secondItem="NtS-QV-L5J" secondAttribute="bottom" constant="16" id="vv8-XI-PZ4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Jm5-W5-mgP" secondAttribute="trailing" constant="16" id="Bd4-Ye-SPA"/>
+                    <constraint firstAttribute="bottom" secondItem="Jm5-W5-mgP" secondAttribute="bottom" constant="4" id="IYQ-6o-nug"/>
+                    <constraint firstItem="Jm5-W5-mgP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="mX0-x3-4Ur"/>
+                    <constraint firstItem="Jm5-W5-mgP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="wbE-yi-730"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgViewProfile" destination="NtS-QV-L5J" id="5ND-Lq-siq"/>
+                <outlet property="lblGender" destination="mpQ-Kc-iCC" id="aMA-jg-iMk"/>
+                <outlet property="lblStudentName" destination="7bN-gD-DP3" id="pqN-Nb-PBU"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="88.058035714285708"/>
+        </tableViewCell>
+    </objects>
+</document>
